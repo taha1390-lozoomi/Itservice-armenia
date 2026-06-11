@@ -1,0 +1,505 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#f4f7fb;
+    color:#2c2c2c;
+    line-height:1.8;
+}
+
+/* Header */
+
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:white;
+
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+
+}
+
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px;
+
+    
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#0F4C81;
+}
+
+/* باکس اصلی که تمام منوها را در خود نگه می‌دارد */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* این مقدار فاصله بین تک‌تک منوها (Home, Services و...) را تنظیم می‌کند */
+}
+
+/* استایل خود لینک‌های منو */
+.nav-links a {
+    font-size: 18px; /* اندازه فونت بزرگ‌تر شده */
+    font-weight: 600; /* ضخامت مناسب متن */
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s ease;
+    white-space: nowrap; /* جلوگیری از شکستن متن منوها به دو خط */
+}
+
+.nav-links a:hover {
+    color: #007bff; /* تغییر رنگ ملایم هنگام رفتن موس روی منو */
+}
+
+
+
+/* Hero */
+
+.hero{
+    min-height:8vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+    linear-gradient(
+    rgba(16, 87, 162, 0.8),
+    rgba(15,76,129,.7)
+    ),
+    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80');
+
+    background-size:cover;
+    background-position:center;
+
+    color:white;
+    text-align:center;
+
+    padding:50px;
+}
+
+.home{
+    min-height:80vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+    linear-gradient(
+    rgba(15,76,129,.8),
+    rgba(15,76,129,.7)
+    ),
+    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80');
+
+    background-size:cover;
+    background-position:center;
+
+    color:white;
+    text-align:center;
+
+    padding:50px;
+}
+
+.hero-content{
+    max-width:850px;
+
+    animation:fadeUp 1.2s ease;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+
+    background:white;
+    color:#0F4C81;
+
+    padding:15px 30px;
+
+    text-decoration:none;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+/* Sections */
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    color:#0F4C81;
+    font-size:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content h3{
+    margin-bottom:15px;
+    color:#0F4C81;
+}
+
+/* Why Us */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.feature{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.07);
+}
+
+.feature h3{
+    color:#0F4C81;
+    margin-bottom:10px;
+}
+
+/* Contact Preview */
+
+.contact-box{
+    background:#0F4C81;
+    color:white;
+    border-radius:20px;
+    padding:50px;
+    text-align:center;
+}
+
+.contact-box h2{
+    margin-bottom:20px;
+}
+
+/* Footer */
+
+footer{
+    background:#162233;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* Animation */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:38px;
+}
+
+.navbar{
+    flex-direction:column;
+    gap:15px;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+}
+.card{
+    background:white;
+    border-radius:15px;
+    padding:5px;
+    margin-bottom:25px;
+    box-shadow:0 4px 18px rgba(0,0,0,.08);
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content p{
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#0F4C81;
+    margin-bottom:15px;
+}
+.btn{
+    display:inline-block;
+    background:#0F4C81;
+    color:white;
+    padding:12px 22px;
+    border-radius:10px;
+    text-decoration:none;
+    transition:.3s;
+    font-weight:600;
+    margin-top:10px;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    background:#0b3a63;
+}
+
+input, textarea{
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+/* ===== ACTIVE LINK ===== */
+.nav-links a.active{
+    color:#0F4C81;
+    border-bottom:2px solid #0F4C81;
+    padding-bottom:5px;
+}
+
+/* ===== PAGE FADE ANIMATION ===== */
+body{
+    animation: pageFade .4s ease-in;
+}
+
+@keyframes pageFade{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ===== MOBILE MENU ===== */
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+    color:#0F4C81;
+}
+
+@media(max-width:768px){
+
+.nav-links{
+    display:none;
+    flex-direction:column;
+    background:white;
+    position:absolute;
+    top:70px;
+    right:20px;
+    width:200px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    padding:15px;
+    border-radius:10px;
+}
+
+.nav-links.show{
+    display:flex;
+}
+
+.menu-toggle{
+    display:block;
+}
+
+}
+.contact-section{
+    padding:80px 20px;
+}
+
+.contact-container{
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.contact-img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid white;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    display:block;
+
+    object-fit: contain;
+    background:white;
+}
+
+.contact-content{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    max-width:600px;
+}
+.btn{
+    display:inline-block;
+    background:#0F4C81;
+    color:white;
+    padding:12px 22px;
+    border-radius:10px;
+    text-decoration:none;
+    transition:.3s;
+    font-weight:600;
+    margin-top:10px;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    background:#0b3a63;
+}
+
+input, textarea{
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+.card{
+    background:white;
+    border-radius:15px;
+    padding:5px;
+    margin-bottom:25px;
+    box-shadow:0 4px 18px rgba(0,0,0,.08);
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content p{
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#0F4C81;
+    margin-bottom:15px;
+}
+/* ردیف پرچم‌ها در هدر */
+.lang-flags {
+    display: flex;
+    align-items: center; /* تراز کردن دقیق پرچم‌ها با خط وسط منوها */
+    gap: 12px;
+    font-size: 18px; /* کوچک‌تر کردن اندازه اموجی‌ها برای برابر شدن با متن */
+    line-height: 1;
+}
+
+.flag-link {
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.45;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* افکت حرکت موس روی پرچم‌ها */
+.flag-link:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+/* پرچم زبانی که در حال حاضر فعال است */
+.flag-link.active {
+    opacity: 1;
+    pointer-events: none;
+    position: relative;
+}
+
+/* خط زیرین ظریف برای پرچم فعال که با اندازه جدید هماهنگ است */
+.flag-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #007bff;
+    border-radius: 1px;
+}
