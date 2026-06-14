@@ -7,15 +7,21 @@
     <title>Մեր Մասին | Հաշվապահական Ծրագրային Ապահովում</title>
     <link rel="stylesheet" href="../style.css">
 </head>
-
+<script>
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("show");
+}
+</script>
 <body>
 
     <header>
         <div class="navbar">
 
     <div class="logo">
-        IT Service & Support
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    IT Service & Support
+</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
     <div class="nav-links" id="navLinks">
         <a href="index.html">Գլխավոր</a>
