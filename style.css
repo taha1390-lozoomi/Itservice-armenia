@@ -533,3 +533,12 @@ input, textarea{
         display:block;
     }
 }
+.lang-flags{
+    display:flex;
+    gap:10px;
+}
+
+.flag-link{
+    text-decoration:none;
+    font-size:24px;
+}
