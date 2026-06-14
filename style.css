@@ -503,3 +503,33 @@ input, textarea{
     background-color: #007bff;
     border-radius: 1px;
 }
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+    color:#0F4C81;
+}
+
+@media(max-width:768px){
+
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        background:white;
+        position:absolute;
+        top:70px;
+        right:20px;
+        width:200px;
+        box-shadow:0 5px 20px rgba(0,0,0,.1);
+        padding:15px;
+        border-radius:10px;
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+}
